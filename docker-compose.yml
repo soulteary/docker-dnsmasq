@@ -1,0 +1,12 @@
+version: "3"
+services:
+
+  dns:
+    # image: jpillora/dnsmasq
+    image: soulteary/docker-dnsmasq
+    ports:
+      - "5553:53/udp"
+      - "5553:53/tcp"
+      - "8080:8080"
+    env_file:
+      - .env
